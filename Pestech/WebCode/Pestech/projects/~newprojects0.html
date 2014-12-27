@@ -1,0 +1,207 @@
+
+<!-- BEGIN Panel Head -->
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.1.18990">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-262290FB
+</script>
+<script src="{page:pathToRoot}ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-F9B79976
+</script>
+<link rel="stylesheet" type="text/css" href="{CCS_PathToMasterPage}jquery-ui.css">
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Features CSS @1-892C108D
+</script>
+<style type="text/css">
+    .ContentqryProjNewSearchs_projectname-autocomplete {
+        max-height: 250px;
+        width: 250px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+</style>
+<script type="text/javascript">
+//End Features CSS
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Controls Selecting @1-BAF6E426
+    $('body').ccsBind(function() {
+        features["ContentqryProjNewSearchs_projectnameAutocomplete1"] = $('*:ccsControl(Content, qryProjNewSearch, s_projectname)');
+    });
+//End Controls Selecting
+
+//Feature Parameters @1-24ED4675
+    params["ContentqryProjNewSearchs_projectnameAutocomplete1"] = { 
+        template: '{@text}',
+        customCssClassName: "ContentqryProjNewSearchs_projectname-autocomplete",
+        source: "../services/projects_newprojects_s_projectname_Autocomplete1.php"
+    };
+//End Feature Parameters
+
+//Feature Init @1-F271E9F6
+    features["ContentqryProjNewSearchs_projectnameAutocomplete1"].ccsBind(function() {
+        this.ccsAutoComplete(params["ContentqryProjNewSearchs_projectnameAutocomplete1"]);
+    });
+//End Feature Init
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+<title>Pestech</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content --><br>
+<br>
+&nbsp; 
+<form id="qryProjNewSearch" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+            <td class="th"><strong>{res:Search_Form}</strong></td> 
+            <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="{@error-block}" class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="qryProjNewSearchs_projectname">{res:projectname}</label></td> 
+            <td><input id="qryProjNewSearchs_projectname" maxlength="250" size="50" value="{s_projectname}" name="{s_projectname_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="qryProjNewSearchs_projecttype">{res:projecttype}</label></td> 
+            <td>
+              <select id="qryProjNewSearchs_projecttype" name="{s_projecttype_Name}">
+                <option selected value="">{res:CCS_SelectValue}</option>
+ {s_projecttype_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="qryProjNewSearchs_isactive">{res:isactive}</label></td> 
+            <td>
+              <select id="qryProjNewSearchs_isactive" name="{s_isactive_Name}">
+                <option selected value="">{res:CCS_SelectValue}</option>
+ {s_isactive_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="2"><input type="submit" id="qryProjNewSearchButton_DoSearch" class="Button" alt="{res:CCS_Search}" value="{res:CCS_Search}" name="{Button_Name}"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<br>
+<!-- BEGIN Grid qryProjNew -->
+<table id="ContentqryProjNew" class="MainTable" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+          <td class="th"><strong>List Of New Projects </strong></td> 
+          <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_projects_Id --><span class="Sorter"><a href="{Sort_URL}" id="ContentqryProjNewSorter_projects_Id">{res:projects_Id}</a><font color="#000000"></font>
+          <!-- BEGIN Asc_On --><font color="#000000"><img alt="{res:CCS_ASC}" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"></font><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_projects_Id --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_projecttype --><span class="Sorter"><a href="{Sort_URL}" id="ContentqryProjNewSorter_projecttype">{res:projecttype}</a><font color="#000000"></font>
+          <!-- BEGIN Asc_On --><font color="#000000"><img alt="{res:CCS_ASC}" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"></font><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_projecttype --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_projectname --><span class="Sorter"><a href="{Sort_URL}" id="ContentqryProjNewSorter_projectname">{res:projectname}</a><font color="#000000"></font>
+          <!-- BEGIN Asc_On --><font color="#000000"><img alt="{res:CCS_ASC}" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"></font><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_projectname --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_substation --><span class="Sorter"><a href="{Sort_URL}" id="ContentqryProjNewSorter_substation">{res:substation}</a><font color="#000000"></font>
+          <!-- BEGIN Asc_On --><font color="#000000"><img alt="{res:CCS_ASC}" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"></font><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_substation --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_projectyear --><span class="Sorter"><a href="{Sort_URL}" id="ContentqryProjNewSorter_projectyear">{res:projectyear}</a><font color="#000000"></font>
+          <!-- BEGIN Asc_On --><font color="#000000"><img alt="{res:CCS_ASC}" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"></font><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_projectyear --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_isactive --><span class="Sorter"><a href="{Sort_URL}" id="ContentqryProjNewSorter_isactive">{res:isactive}</a><font color="#000000"></font>
+          <!-- BEGIN Asc_On --><font color="#000000"><img alt="{res:CCS_ASC}" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"></font><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_isactive --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right">{projects_Id}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{projecttype}&nbsp;</td> 
+          <td>{projectname}&nbsp;</td> 
+          <td>{substation}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{projectyear}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{isactive}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="6">No records</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="6">
+            <!-- BEGIN Navigator Navigator --><span class="Navigator">{res:CCS_RecPerPage} 
+            <select style="VERTICAL-ALIGN: middle" name="{FormName}PageSize" data-grid-size="{FormName}">
+              <option selected value="">-</option>
+ {PageSize_Options}
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}"><img alt="{First_URL}" src="{CCS_PathToMasterPage}Images/NavigatorFirst.png"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img alt="{First_URL}" src="{CCS_PathToMasterPage}Images/NavigatorFirstOff.png"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="{CCS_PathToMasterPage}Images/NavigatorPrev.png"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img alt="{Prev_URL}" src="{CCS_PathToMasterPage}Images/NavigatorPrevOff.png"><!-- END Prev_Off -->&nbsp;{Page_Number} {res:CCS_Of}&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="{CCS_PathToMasterPage}Images/NavigatorNext.png"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="{CCS_PathToMasterPage}Images/NavigatorNextOff.png"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img alt="{Last_URL}" src="{CCS_PathToMasterPage}Images/NavigatorLast.png"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="{CCS_PathToMasterPage}Images/NavigatorLastOff.png"><!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid qryProjNew --><br>
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{menuincludablepage}<!-- END Panel Menu -->
+<!-- BEGIN Panel HeaderSidebar -->{headerincludablepage}<!-- END Panel HeaderSidebar -->

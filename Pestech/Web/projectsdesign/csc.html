@@ -1,0 +1,383 @@
+
+<!-- BEGIN Panel Head -->
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.1.18990">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-262290FB
+</script>
+<script src="{page:pathToRoot}ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//ContentconductorsizingcalculatioButton_DeleteOnClick Event Start @-3AF7DC5C
+    actions["ContentconductorsizingcalculatioButton_DeleteOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End ContentconductorsizingcalculatioButton_DeleteOnClick Event Start
+
+//Confirmation Message @13-8243B274
+        return confirm('Delete record?');
+//End Confirmation Message
+
+//ContentconductorsizingcalculatioButton_DeleteOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End ContentconductorsizingcalculatioButton_DeleteOnClick Event End
+
+//Event Binding @1-8A0D352F
+    $('*:ccsControl(Content, conductorsizingcalculatio, Button_Delete)').ccsBind(function() {
+        this.bind("click", actions["ContentconductorsizingcalculatioButton_DeleteOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-A70F7380
+    $('*:ccsControl(Content, conductorsizingcalculatio, Button_Delete)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+    $('*:ccsControl(Content, conductorsizingcalculatio, Button_Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+<title>Pestech</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record conductorsizingcalculatio -->
+<form id="Contentconductorsizingcalculatio" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+            <td class="th"><strong>Add/Edit Conductor Sizing Calculations </strong></td> 
+            <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="ErrorBlock" class="Error">
+            <td colspan="4">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th">&nbsp;&nbsp; </td> 
+            <td class="th"><label for="Contentconductorsizingcalculatioprojectid">Project</label></td> 
+            <td>
+              <select id="Contentconductorsizingcalculatioprojectid" name="{projectid_Name}">
+                <option selected value="">Select Value</option>
+                {projectid_Options}
+              </select>
+ </td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr>
+            <td colspan="4">
+              <p>System Parameters and Requirements</p>
+            </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;U</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatiorvikvrms">Rated voltage in kVrms</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatiorvikvrms" maxlength="10" size="10" value="{rvikvrms}" name="{rvikvrms_Name}">&nbsp;kVms</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;</td> 
+            <td class="th">
+              <p><label for="Contentconductorsizingcalculatioscxrratio">Short-circuit X/R ratio</label></p>
+            </td> 
+            <td><input type="text" id="Contentconductorsizingcalculatioscxrratio" maxlength="10" size="10" value="{scxrratio}" name="{scxrratio_Name}">&nbsp;ratio</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;Ik3"</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatioissccurrt">Initial Symmetrical Short-circuit current</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatioissccurrt" maxlength="10" size="10" value="{issccurrt}" name="{issccurrt_Name}">&nbsp;kA</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;Ik</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatiossssscurrt">Steady-State Symmetrical Short-circuit current&nbsp; </label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatiossssscurrt" maxlength="10" size="10" value="{ssssscurrt}" name="{ssssscurrt_Name}">&nbsp;kA</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;Tk</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatiodosccurrt">Duration of the short circuit current </label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatiodosccurrt" maxlength="10" size="10" value="{dosccurrt}" name="{dosccurrt_Name}">&nbsp;s</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;Tkr</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatiodorsccurrt">Duration of the rated short circuit current </label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatiodorsccurrt" maxlength="10" size="10" value="{dorsccurrt}" name="{dorsccurrt_Name}">&nbsp;s</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;f</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatiosysfreq">System frequency </label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatiosysfreq" maxlength="10" size="10" value="{sysfreq}" name="{sysfreq_Name}">&nbsp;Hz</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr>
+            <td colspan="4">Calculation for 275kV Transformer/ Skeleton Bay (below 2000A stranded connection) </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"></td> 
+            <td class="th"><label for="Contentconductorsizingcalculatiorccratg">Required Conductor Current Rating</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatiorccratg" maxlength="10" size="10" value="{rccratg}" name="{rccratg_Name}">&nbsp;A</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;n</td> 
+            <td class="th"><label for="Contentconductorsizingcalculationoppwires">Number of // wires</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculationoppwires" maxlength="10" size="10" value="{noppwires}" name="{noppwires_Name}"></td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;l</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatiospanlgth">Span length</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatiospanlgth" maxlength="10" size="10" value="{spanlgth}" name="{spanlgth_Name}">&nbsp;m</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;hs</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatiohocondctr">Height of conductor</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatiohocondctr" maxlength="12" size="12" value="{hocondctr}" name="{hocondctr_Name}">&nbsp;m</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;am</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatioipspacg">Inter-phase spacing</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatioipspacg" maxlength="12" size="12" value="{ipspacg}" name="{ipspacg_Name}">&nbsp;m</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"></td> 
+            <td class="th"><label for="Contentconductorsizingcalculatioacsvgradt">Allowable Conductor Surface Voltage Gradient</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatioacsvgradt" maxlength="10" size="10" value="{acsvgradt}" name="{acsvgradt_Name}">&nbsp;kV/cm</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr>
+            <td colspan="4">AAC Conductor Details</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"></td> 
+            <td class="th"><label for="Contentconductorsizingcalculatiomake">Make</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatiomake" maxlength="250" size="50" value="{make}" name="{make_Name}"></td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"></td> 
+            <td class="th"><label for="Contentconductorsizingcalculatiocoorigin">Country of Origin</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatiocoorigin" maxlength="250" size="50" value="{coorigin}" name="{coorigin_Name}"></td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr>
+            <td colspan="4">Material property</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"></td> 
+            <td class="th"><label for="Contentconductorsizingcalculatiotoalloy">Type of Alloy</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatiotoalloy" maxlength="250" size="50" value="{toalloy}" name="{toalloy_Name}"></td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"></td> 
+            <td class="th"><label for="Contentconductorsizingcalculatioccname">Conductor Code Name</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatioccname" maxlength="250" size="50" value="{ccname}" name="{ccname_Name}"></td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;Rdc20 </td> 
+            <td class="th"><label for="Contentconductorsizingcalculatioedcrocond">Electrical DC resistance of conductor at 20C</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatioedcrocond" maxlength="12" size="12" value="{edcrocond}" name="{edcrocond_Name}">&nbsp;n/km</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;c</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatioshocmatrl">Specific Heat of Conductor Material</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatioshocmatrl" maxlength="10" size="10" value="{shocmatrl}" name="{shocmatrl_Name}">&nbsp;J/kg/C</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;p</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatiodocondmatrl">Density of conductor material</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatiodocondmatrl" maxlength="10" size="10" value="{docondmatrl}" name="{docondmatrl_Name}">&nbsp;kg/m3</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;k20</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatiocomatrl">Conductivity of Material</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatiocomatrl" maxlength="12" size="12" value="{comatrl}" name="{comatrl_Name}">&nbsp;1/nm</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;a20</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatiotcorestnce">Temperature Coefficient of resistance at 20C</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatiotcorestnce" maxlength="12" size="12" value="{tcorestnce}" name="{tcorestnce_Name}">&nbsp;n/K</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr>
+            <td colspan="4">Mechanical details</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;A</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatioccsectn">Conductor cross section</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatioccsectn" maxlength="10" size="10" value="{ccsectn}" name="{ccsectn_Name}">&nbsp;mm2</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;D</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatiooveralldiam">Overall Diameter</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatiooveralldiam" maxlength="12" size="12" value="{overalldiam}" name="{overalldiam_Name}">&nbsp;mm</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp; s</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatiodbscctrs">Distance between sub-conductor centres</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatiodbscctrs" maxlength="10" size="10" value="{dbscctrs}" name="{dbscctrs_Name}">&nbsp;mm</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;m'</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatiompulength">Mass per unit length</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatiompulength" maxlength="12" size="12" value="{mpulength}" name="{mpulength_Name}">&nbsp;kg/m</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr>
+            <td colspan="4">Environmental details</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;t</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatioambtemp">Ambient temperature</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatioambtemp" maxlength="10" size="10" value="{ambtemp}" name="{ambtemp_Name}">&nbsp;C</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;q</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatiofctemp">Final conductor temperature</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatiofctemp" maxlength="10" size="10" value="{fctemp}" name="{fctemp_Name}">&nbsp;C</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;qb</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatioctabeginosc">Conductor temperature at the beginning of the short circuit</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatioctabeginosc" maxlength="10" size="10" value="{ctabeginosc}" name="{ctabeginosc_Name}">&nbsp;C</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;qc</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatioctaendosc">Conductor temperature at the end of the short circuit</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatioctaendosc" maxlength="10" size="10" value="{ctaendosc}" name="{ctaendosc_Name}">&nbsp;C</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;v</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatiocwindspeed">Convection wind speed</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatiocwindspeed" maxlength="12" size="12" value="{cwindspeed}" name="{cwindspeed_Name}">&nbsp;m/s</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;y</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatiosracoeff">Solar radiation absorption coefficient</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatiosracoeff" maxlength="12" size="12" value="{sracoeff}" name="{sracoeff_Name}"></td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;Si</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatioiosradtn">Intensity of solar radiation</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatioiosradtn" maxlength="10" size="10" value="{iosradtn}" name="{iosradtn_Name}">&nbsp;W/m2</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;Ke</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatioecoeffirtbb">Emissivity coefficient in respect to black body</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatioecoeffirtbb" maxlength="12" size="12" value="{ecoeffirtbb}" name="{ecoeffirtbb_Name}"></td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;E</td> 
+            <td class="th"><label for="Contentconductorsizingcalculatioymoelas">Young's modulus of elasticity</label></td> 
+            <td><input type="text" id="Contentconductorsizingcalculatioymoelas" maxlength="12" size="12" value="{ymoelas}" name="{ymoelas_Name}">&nbsp;N/m2</td> 
+            <td class="th"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="ContentconductorsizingcalculatioButton_Insert" class="Button" alt="Add" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="submit" id="ContentconductorsizingcalculatioButton_Update" class="Button" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input type="submit" id="ContentconductorsizingcalculatioButton_Delete" class="Button" alt="Delete" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="ContentconductorsizingcalculatioButton_Cancel" class="Button" alt="Cancel" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record conductorsizingcalculatio --><br>
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->&nbsp;{menuincludablepage}<!-- END Panel Menu -->
+<!-- BEGIN Panel HeaderSidebar -->{headerincludablepage}<!-- END Panel HeaderSidebar -->

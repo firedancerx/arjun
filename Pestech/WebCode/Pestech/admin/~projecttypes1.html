@@ -1,0 +1,402 @@
+
+<!-- BEGIN Panel Head -->
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.1.18990">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-262290FB
+</script>
+<script src="{page:pathToRoot}ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-F9B79976
+</script>
+<link rel="stylesheet" type="text/css" href="{CCS_PathToMasterPage}jquery-ui.css">
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Features CSS @1-BB26594C
+</script>
+<style type="text/css">
+    .ContentPanel1projecttypesSearchs_typename-autocomplete {
+        max-height: 250px;
+        width: 250px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+</style>
+<script type="text/javascript">
+//End Features CSS
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Controls Selecting @1-A48C56D9
+    $('body').ccsBind(function() {
+        features["ContentPanel1projecttypesSearchs_typenameAutocomplete1"] = $('*:ccsControl(Content, Panel1, projecttypesSearch, s_typename)');
+        features["ContentPanel1Panel2DialogPanel1"] = $('*:ccsControl(Content, Panel1, Panel2)');
+        features["ContentPanel1UpdatePanel1"] = $('*:ccsControl(Content, Panel1)');
+        features["ContentPanel1condition_for_show"] = $('*:ccsControl(Content, Panel1)');
+        features["ContentPanel1condition_for_hide"] = $('*:ccsControl(Content, Panel1)');
+        features["ContentPanel1ccc_link_Condition"] = $('*:ccsControl(Content, Panel1)');
+        features["ContentPanel1ccc_submit_Condition"] = $('*:ccsControl(Content, Panel1)');
+        features["ContentPanel1ccc_others_Condition"] = $('*:ccsControl(Content, Panel1)');
+    });
+//End Controls Selecting
+
+//Feature Parameters @1-E1B2F081
+    params["ContentPanel1projecttypesSearchs_typenameAutocomplete1"] = { 
+        template: '{@text}',
+        customCssClassName: "ContentPanel1projecttypesSearchs_typename-autocomplete",
+        source: "../services/admin_projecttypes_s_typename_Autocomplete1.php"
+    };
+    params["ContentPanel1Panel2DialogPanel1"] = { 
+        title: " Add/Edit Project Types ",
+        modal: true,
+        autoOpen: false
+    };
+    params["ContentPanel1UpdatePanel1"] = {
+        name: "ContentPanel1"
+    };
+//End Feature Parameters
+
+//Feature Init @1-1615393F
+    features["ContentPanel1projecttypesSearchs_typenameAutocomplete1"].ccsBind(function() {
+        this.ccsAutoComplete(params["ContentPanel1projecttypesSearchs_typenameAutocomplete1"]);
+    });
+    features["ContentPanel1Panel2DialogPanel1"].ccsBind(function() {
+        this.ccsDialog(params["ContentPanel1Panel2DialogPanel1"]);
+    });
+    features["ContentPanel1UpdatePanel1"].ccsBind(function() {
+        this.ccsUpdatePanel(params["ContentPanel1UpdatePanel1"]);
+    });
+//End Feature Init
+
+//DialogPanel1 show Entry Point @77-94F59FFD
+    actions["ContentPanel1Panel2DialogPanel1_show"] = function () {
+        features["ContentPanel1Panel2DialogPanel1"].ccsDialog("show");
+        return false;
+    };
+//End DialogPanel1 show Entry Point
+
+//DialogPanel1 hide Entry Point @77-80C22A5C
+    actions["ContentPanel1Panel2DialogPanel1_hide"] = function () {
+        features["ContentPanel1Panel2DialogPanel1"].ccsDialog("hide");
+    };
+//End DialogPanel1 hide Entry Point
+
+//condition_for_show start Entry Point Start @45-10FC468A
+    actions["ContentPanel1condition_for_show_start"] = function (eventType, parameters) {
+//End condition_for_show start Entry Point Start
+
+//condition_for_show start Entry Point Body @45-554DBAD1
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content, Panel1)");
+        if (true==(params["click"] == "link")) {
+            self.trigger($.Event("true.condition_for_show"), {});
+        } else {
+            self.trigger($.Event("false.condition_for_show"), {});
+        }
+//End condition_for_show start Entry Point Body
+
+//condition_for_show start Entry Point End @45-6A43FC60
+    };
+//End condition_for_show start Entry Point End
+
+//condition_for_hide start Entry Point Start @51-0CB811BA
+    actions["ContentPanel1condition_for_hide_start"] = function (eventType, parameters) {
+//End condition_for_hide start Entry Point Start
+
+//condition_for_hide start Entry Point Body @51-9FA0C383
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content, Panel1)");
+        if (true==(params["click"] == "submit" && $("#ErrorBlock").length == 0)) {
+            self.trigger($.Event("true.condition_for_hide"), {});
+        } else {
+            self.trigger($.Event("false.condition_for_hide"), {});
+        }
+//End condition_for_hide start Entry Point Body
+
+//condition_for_hide start Entry Point End @51-6A43FC60
+    };
+//End condition_for_hide start Entry Point End
+
+//ccc_link_Condition start Entry Point Start @57-06B04180
+    actions["ContentPanel1ccc_link_Condition_start"] = function (eventType, parameters) {
+//End ccc_link_Condition start Entry Point Start
+
+//ccc_link_Condition start Entry Point Body @57-BF4FE5F8
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content, Panel1)");
+        if (true==(params["click"] = "link")) {
+            self.trigger($.Event("true.ccc_link_Condition"), {});
+        } else {
+            self.trigger($.Event("false.ccc_link_Condition"), {});
+        }
+//End ccc_link_Condition start Entry Point Body
+
+//ccc_link_Condition start Entry Point End @57-6A43FC60
+    };
+//End ccc_link_Condition start Entry Point End
+
+//ccc_submit_Condition start Entry Point Start @70-B8C1C859
+    actions["ContentPanel1ccc_submit_Condition_start"] = function (eventType, parameters) {
+//End ccc_submit_Condition start Entry Point Start
+
+//ccc_submit_Condition start Entry Point Body @70-089D9D8D
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content, Panel1)");
+        if (true==(params["click"] = "submit")) {
+            self.trigger($.Event("true.ccc_submit_Condition"), {});
+        } else {
+            self.trigger($.Event("false.ccc_submit_Condition"), {});
+        }
+//End ccc_submit_Condition start Entry Point Body
+
+//ccc_submit_Condition start Entry Point End @70-6A43FC60
+    };
+//End ccc_submit_Condition start Entry Point End
+
+//ccc_others_Condition start Entry Point Start @88-3FDEE698
+    actions["ContentPanel1ccc_others_Condition_start"] = function (eventType, parameters) {
+//End ccc_others_Condition start Entry Point Start
+
+//ccc_others_Condition start Entry Point Body @88-2D075684
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content, Panel1)");
+        if (true==(params["click"] = "")) {
+            self.trigger($.Event("true.ccc_others_Condition"), {});
+        } else {
+            self.trigger($.Event("false.ccc_others_Condition"), {});
+        }
+//End ccc_others_Condition start Entry Point Body
+
+//ccc_others_Condition start Entry Point End @88-6A43FC60
+    };
+//End ccc_others_Condition start Entry Point End
+
+//ContentPanel1Panel2projecttypes2Button_DeleteOnClick Event Start @-462B8DC6
+    actions["ContentPanel1Panel2projecttypes2Button_DeleteOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End ContentPanel1Panel2projecttypes2Button_DeleteOnClick Event Start
+
+//Confirmation Message @37-8243B274
+        return confirm('Delete record?');
+//End Confirmation Message
+
+//ContentPanel1Panel2projecttypes2Button_DeleteOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End ContentPanel1Panel2projecttypes2Button_DeleteOnClick Event End
+
+//Event Binding @1-33F8F8A7
+    features["ContentPanel1condition_for_show"].ccsBind(function() {
+        this.bind("true.condition_for_show", actions["ContentPanel1Panel2DialogPanel1_show"]);
+    });
+    features["ContentPanel1condition_for_hide"].ccsBind(function() {
+        this.bind("true.condition_for_hide", actions["ContentPanel1Panel2DialogPanel1_hide"]);
+    });
+    features["ContentPanel1UpdatePanel1"].ccsBind(function() {
+        this.bind("afterrefresh.ccsUpdatePanel", actions["ContentPanel1condition_for_show_start"]);
+    });
+    features["ContentPanel1UpdatePanel1"].ccsBind(function() {
+        this.bind("afterrefresh.ccsUpdatePanel", actions["ContentPanel1condition_for_hide_start"]);
+    });
+    features["ContentPanel1Panel2DialogPanel1"].ccsBind(function() {
+        this.bind("show.ccsDialog", actions["ContentPanel1ccc_others_Condition_start"]);
+    });
+    features["ContentPanel1Panel2DialogPanel1"].ccsBind(function() {
+        this.bind("hide.ccsDialog", actions["ContentPanel1ccc_others_Condition_start"]);
+    });
+    $('*:ccsControl(Content, Panel1, projecttypes1, projecttypes1_Insert)').ccsBind(function() {
+        this.bind("click", actions["ContentPanel1ccc_link_Condition_start"]);
+    });
+    $('*:ccsControl(Content, Panel1, projecttypes1, typename)').ccsBind(function() {
+        this.bind("click", actions["ContentPanel1ccc_link_Condition_start"]);
+    });
+    $('*:ccsControl(Content, Panel1, Panel2, projecttypes2)').ccsBind(function() {
+        this.bind("submit", actions["ContentPanel1ccc_submit_Condition_start"]);
+    });
+    $('*:ccsControl(Content, Panel1, Panel2, projecttypes2, Button_Delete)').ccsBind(function() {
+        this.bind("click", actions["ContentPanel1Panel2projecttypes2Button_DeleteOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-9804884F
+    $('*:ccsControl(Content, Panel1, Panel2, projecttypes2, Button_Delete)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+    $('*:ccsControl(Content, Panel1, Panel2, projecttypes2, Button_Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+<title>GTalk</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->&nbsp; 
+<!-- BEGIN Panel Panel1 -->
+<!-- BEGIN Record projecttypesSearch -->
+<form id="ContentPanel1projecttypesSearch" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+            <td class="th"><strong>Search </strong></td> 
+            <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="{@error-block}" class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1projecttypesSearchs_typename">Project Type</label></td> 
+            <td>
+              <!-- BEGIN TextBox s_typename --><input type="text" id="ContentPanel1projecttypesSearchs_typename" maxlength="250" size="50" value="{s_typename}" name="{s_typename_Name}"><!-- END TextBox s_typename --></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="ContentPanel1projecttypesSearchButton_DoSearch" class="Button" alt="Search" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record projecttypesSearch --><br>
+<!-- BEGIN Grid projecttypes1 -->
+<table id="ContentPanel1projecttypes1" class="MainTable" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+          <td class="th"><strong>List of Project Types </strong></td> 
+          <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Row">
+          <td colspan="2">Total Records:&nbsp;{projecttypes1_TotalRecords}</td> 
+        </tr>
+ 
+        <tr class="Caption">
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_typename --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1projecttypes1Sorter_typename">Project Type</a></span><!-- END Sorter Sorter_typename --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_typedescription --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1projecttypes1Sorter_typedescription">Notes</a></span><!-- END Sorter Sorter_typedescription --></th>
+ 
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td><a href="{typename_Src}" id="ContentPanel1projecttypes1typename_{projecttypes1:rowNumber}">{typename}</a>&nbsp;</td> 
+          <td>{typedescription}&nbsp;</td> 
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="2">No records</td> 
+        </tr>
+ <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="2"><a href="{projecttypes1_Insert_Src}" id="ContentPanel1projecttypes1projecttypes1_Insert">Add New</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator --><span class="Navigator">Records per page 
+            <select style="VERTICAL-ALIGN: middle" name="{FormName}PageSize" data-grid-size="{FormName}">
+              <option selected value="">-</option>
+ {PageSize_Options} 
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}"><img alt="{First_URL}" src="{CCS_PathToMasterPage}Images/NavigatorFirst.png"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img alt="{First_URL}" src="{CCS_PathToMasterPage}Images/NavigatorFirstOff.png"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="{CCS_PathToMasterPage}Images/NavigatorPrev.png"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img alt="{Prev_URL}" src="{CCS_PathToMasterPage}Images/NavigatorPrevOff.png"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="{CCS_PathToMasterPage}Images/NavigatorNext.png"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="{CCS_PathToMasterPage}Images/NavigatorNextOff.png"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img alt="{Last_URL}" src="{CCS_PathToMasterPage}Images/NavigatorLast.png"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="{CCS_PathToMasterPage}Images/NavigatorLastOff.png"><!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Grid projecttypes1 --><br>
+<!-- BEGIN Panel Panel2 -->
+<!-- BEGIN Record projecttypes2 -->
+<form id="ContentPanel1Panel2projecttypes2" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+            <td class="th"><strong>Add/Edit Project Types </strong></td> 
+            <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="ErrorBlock" class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1Panel2projecttypes2typename">Project Type</label></td> 
+            <td><input type="text" id="ContentPanel1Panel2projecttypes2typename" maxlength="250" size="50" value="{typename}" name="{typename_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1Panel2projecttypes2typedescription">Notes</label></td> 
+            <td><textarea id="ContentPanel1Panel2projecttypes2typedescription" rows="3" cols="50" name="{typedescription_Name}">{typedescription}</textarea></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1Panel2projecttypes2isactive">Is Active</label></td> 
+            <td>
+              <select id="ContentPanel1Panel2projecttypes2isactive" name="{isactive_Name}">
+                <option selected value="">Select Value</option>
+ {isactive_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="ContentPanel1Panel2projecttypes2Button_Insert" class="Button" alt="Add" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="submit" id="ContentPanel1Panel2projecttypes2Button_Update" class="Button" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input type="submit" id="ContentPanel1Panel2projecttypes2Button_Delete" class="Button" alt="Delete" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="ContentPanel1Panel2projecttypes2Button_Cancel" class="Button" alt="Cancel" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record projecttypes2 --><!-- END Panel Panel2 --><br>
+<!-- END Panel Panel1 --><!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{menuincludablepage}<!-- END Panel Menu -->
+<!-- BEGIN Panel HeaderSidebar -->{headerincludablepage}<!-- END Panel HeaderSidebar -->

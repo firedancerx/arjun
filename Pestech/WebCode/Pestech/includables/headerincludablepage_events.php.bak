@@ -1,0 +1,26 @@
+<?php
+// //Events @1-F81417CB
+
+//headerincludablepage_BeforeShow @1-E01C526A
+function headerincludablepage_BeforeShow(& $sender)
+{
+    $headerincludablepage_BeforeShow = true;
+    $Component = & $sender;
+    $Container = & CCGetParentContainer($sender);
+    global $headerincludablepage; //Compatibility
+//End headerincludablepage_BeforeShow
+
+//Custom Code @6-2A29BDB7
+// -------------------------
+    // Write your own code here.
+// -------------------------
+$headerincludablepage->NewRecord1->TextBox1->SetValue(CCGetUserID());
+//End Custom Code
+
+//Close headerincludablepage_BeforeShow @1-2CDCE022
+    return $headerincludablepage_BeforeShow;
+}
+//End Close headerincludablepage_BeforeShow
+
+
+?>

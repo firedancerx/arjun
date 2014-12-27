@@ -1,0 +1,114 @@
+
+<!-- BEGIN Panel Head -->
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.1.18990">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-262290FB
+</script>
+<script src="{page:pathToRoot}ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Plugin Calls @1-72034808
+    $('*:ccsControl(Content, users, Button_Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+<title>GTalk</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->&nbsp;&nbsp;<br>
+&nbsp;
+<!-- BEGIN Record users -->
+<form id="Contentusers" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="file:///D:/Documents%20and%20Settings/Codedev/My%20Projects/Work/R&D/Eclipse/GTalk1/webcode/gtalk1/secure/{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+            <td class="th"><strong>New User Registration</strong></td> 
+            <td class="HeaderRight"><img alt="" src="file:///D:/Documents%20and%20Settings/Codedev/My%20Projects/Work/R&D/Eclipse/GTalk1/webcode/gtalk1/secure/{CCS_PathToMasterPage}Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="ErrorBlock" class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="Contentusersusername">Username</label></td> 
+            <td><input type="text" id="Contentusersusername" maxlength="250" size="50" value="{username}" name="{username_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Contentusersfirstname">Firstname</label></td> 
+            <td><input type="text" id="Contentusersfirstname" maxlength="250" size="50" value="{firstname}" name="{firstname_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Contentuserslastname">Lastname</label></td> 
+            <td><input type="text" id="Contentuserslastname" maxlength="250" size="50" value="{lastname}" name="{lastname_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Contentuserspassword">Password</label></td> 
+            <td><input type="password" id="Contentuserspassword" maxlength="250" size="50" value="{password}" name="{password_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Contentusersemail">Email</label></td> 
+            <td><input type="text" id="Contentusersemail" maxlength="250" size="50" value="{email}" name="{email_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Contentuserstelno">Telno</label></td> 
+            <td><input type="text" id="Contentuserstelno" maxlength="250" size="50" value="{telno}" name="{telno_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Contentuserscountry">Country</label></td> 
+            <td>
+              <select id="Contentuserscountry" name="{country_Name}">
+                <option selected value="">Select Value</option>
+                {country_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="ContentusersButton_Insert" class="Button" alt="Add" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="ContentusersButton_Cancel" class="Button" alt="Cancel" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record users --><br>
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{menuincludablepage}<!-- END Panel Menu -->
+<!-- BEGIN Panel HeaderSidebar -->{headerincludablepage}<!-- END Panel HeaderSidebar -->

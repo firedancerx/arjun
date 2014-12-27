@@ -1,0 +1,286 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>GTalk</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<STYLE needdelete>td {border-style:dotted;border-width:1px;border-color:#aaaaaa;} table {border-style:dashed;border-width:1px;border-color:#aaaaaa;}</STYLE>
+<!-- ccs_begin_only_design_snippet --><LINK rel=stylesheet type=text/css 
+href="D:\Documents and Settings\Codedev\My Projects\OneDrive\Work\Arjun\Pestech\WebCode\Pestech\Designs\GTalk1\style.css" 
+media=screen 
+ccs_href="D:\Documents and Settings\Codedev\My Projects\OneDrive\Work\Arjun\Pestech\WebCode\Pestech\Designs\GTalk1\style.css"><!-- ccs_end_only_design_snippet -->
+<META content=IE=7 http-equiv=X-UA-Compatible toremove="toremove">
+<META name=GENERATOR content="MSHTML 11.00.9600.17420"></HEAD>
+<BODY><SPAN contentEditable=true 
+style="BORDER-TOP: transparent 1px dotted; BORDER-RIGHT: transparent 1px dotted; BORDER-BOTTOM: transparent 1px dotted; PADDING-BOTTOM: 3px; PADDING-TOP: 3px; PADDING-LEFT: 3px; BORDER-LEFT: transparent 1px dotted; MARGIN-TOP: 3px; DISPLAY: block; PADDING-RIGHT: 3px" 
+ccsName="Head" ccsServiceable="true" ccsId="2" ccsDesignColorSelection="true" 
+ccsContentPlaceHolder="Head" ccsType="Component">
+<META name=GENERATOR content="CodeCharge Studio 5.1.1.18990" 
+ccsServiceable="true">
+<SCRIPT language=JavaScript type=text/javascript>
+//Begin CCS script
+//Include Common JSFunctions @1-262290FB
+</SCRIPT>
+
+<SCRIPT type=text/javascript charset=utf-8 
+src="D:\Documents and Settings\Codedev\My Projects\OneDrive\Work\Arjun\Pestech\WebCode\Pestech\ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" 
+ccs_src="{page:pathToRoot}ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}"></SCRIPT>
+
+<SCRIPT type=text/javascript>
+//End Include Common JSFunctions
+
+//Include User Scripts @1-F9B79976
+</SCRIPT>
+<LINK rel=stylesheet type=text/css 
+href="D:\Documents and Settings\Codedev\My Projects\OneDrive\Work\Arjun\Pestech\WebCode\Pestech\Designs\GTalk1\jquery-ui.css" 
+ccs_href="{CCS_PathToMasterPage}jquery-ui.css" ccsServiceable="true"><SPAN 
+contentEditable=false 
+style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+ccsServiceable="true" ccsType="Resource" ccsResourcePrefix="page" 
+ccsResourceName="scriptIncludes">page:scriptIncludes</SPAN>
+<SCRIPT type=text/javascript>
+//End Include User Scripts
+
+//Features CSS @1-323680ED
+</SCRIPT>
+ 
+<STYLE type=text/css>
+    .ContentPanel1usersSearchs_username-autocomplete {
+        max-height: 250px;
+        width: 250px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+</STYLE>
+
+<SCRIPT type=text/javascript>
+//End Features CSS
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Controls Selecting @1-83F0BC6F
+    $('body').ccsBind(function() {
+        features["ContentPanel1usersSearchs_usernameAutocomplete1"] = $('*:ccsControl(Content, Panel1, usersSearch, s_username)');
+        features["ContentPanel1Panel2DialogPanel1"] = $('*:ccsControl(Content, Panel1, Panel2)');
+        features["ContentPanel1UpdatePanel1"] = $('*:ccsControl(Content, Panel1)');
+        features["ContentPanel1condition_for_show"] = $('*:ccsControl(Content, Panel1)');
+        features["ContentPanel1condition_for_hide"] = $('*:ccsControl(Content, Panel1)');
+        features["ContentPanel1ccc_link_Condition"] = $('*:ccsControl(Content, Panel1)');
+        features["ContentPanel1ccc_submit_Condition"] = $('*:ccsControl(Content, Panel1)');
+        features["ContentPanel1ccc_others_Condition"] = $('*:ccsControl(Content, Panel1)');
+    });
+//End Controls Selecting
+
+//Feature Parameters @1-23C74F42
+    params["ContentPanel1usersSearchs_usernameAutocomplete1"] = { 
+        template: '{@text}',
+        customCssClassName: "ContentPanel1usersSearchs_username-autocomplete",
+        source: "../services/admin_users_s_username_Autocomplete1.php"
+    };
+    params["ContentPanel1Panel2DialogPanel1"] = { 
+        title: "Add/Edit Users ",
+        modal: true,
+        autoOpen: false
+    };
+    params["ContentPanel1UpdatePanel1"] = {
+        name: "ContentPanel1"
+    };
+//End Feature Parameters
+
+//Feature Init @1-7C425566
+    features["ContentPanel1usersSearchs_usernameAutocomplete1"].ccsBind(function() {
+        this.ccsAutoComplete(params["ContentPanel1usersSearchs_usernameAutocomplete1"]);
+    });
+    features["ContentPanel1Panel2DialogPanel1"].ccsBind(function() {
+        this.ccsDialog(params["ContentPanel1Panel2DialogPanel1"]);
+    });
+    features["ContentPanel1UpdatePanel1"].ccsBind(function() {
+        this.ccsUpdatePanel(params["ContentPanel1UpdatePanel1"]);
+    });
+//End Feature Init
+
+//DialogPanel1 show Entry Point @114-94F59FFD
+    actions["ContentPanel1Panel2DialogPanel1_show"] = function () {
+        features["ContentPanel1Panel2DialogPanel1"].ccsDialog("show");
+        return false;
+    };
+//End DialogPanel1 show Entry Point
+
+//DialogPanel1 hide Entry Point @114-80C22A5C
+    actions["ContentPanel1Panel2DialogPanel1_hide"] = function () {
+        features["ContentPanel1Panel2DialogPanel1"].ccsDialog("hide");
+    };
+//End DialogPanel1 hide Entry Point
+
+//condition_for_show start Entry Point Start @82-10FC468A
+    actions["ContentPanel1condition_for_show_start"] = function (eventType, parameters) {
+//End condition_for_show start Entry Point Start
+
+//condition_for_show start Entry Point Body @82-554DBAD1
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content, Panel1)");
+        if (true==(params["click"] == "link")) {
+            self.trigger($.Event("true.condition_for_show"), {});
+        } else {
+            self.trigger($.Event("false.condition_for_show"), {});
+        }
+//End condition_for_show start Entry Point Body
+
+//condition_for_show start Entry Point End @82-6A43FC60
+    };
+//End condition_for_show start Entry Point End
+
+//condition_for_hide start Entry Point Start @88-0CB811BA
+    actions["ContentPanel1condition_for_hide_start"] = function (eventType, parameters) {
+//End condition_for_hide start Entry Point Start
+
+//condition_for_hide start Entry Point Body @88-9FA0C383
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content, Panel1)");
+        if (true==(params["click"] == "submit" && $("#ErrorBlock").length == 0)) {
+            self.trigger($.Event("true.condition_for_hide"), {});
+        } else {
+            self.trigger($.Event("false.condition_for_hide"), {});
+        }
+//End condition_for_hide start Entry Point Body
+
+//condition_for_hide start Entry Point End @88-6A43FC60
+    };
+//End condition_for_hide start Entry Point End
+
+//ccc_link_Condition start Entry Point Start @94-06B04180
+    actions["ContentPanel1ccc_link_Condition_start"] = function (eventType, parameters) {
+//End ccc_link_Condition start Entry Point Start
+
+//ccc_link_Condition start Entry Point Body @94-BF4FE5F8
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content, Panel1)");
+        if (true==(params["click"] = "link")) {
+            self.trigger($.Event("true.ccc_link_Condition"), {});
+        } else {
+            self.trigger($.Event("false.ccc_link_Condition"), {});
+        }
+//End ccc_link_Condition start Entry Point Body
+
+//ccc_link_Condition start Entry Point End @94-6A43FC60
+    };
+//End ccc_link_Condition start Entry Point End
+
+//ccc_submit_Condition start Entry Point Start @107-B8C1C859
+    actions["ContentPanel1ccc_submit_Condition_start"] = function (eventType, parameters) {
+//End ccc_submit_Condition start Entry Point Start
+
+//ccc_submit_Condition start Entry Point Body @107-089D9D8D
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content, Panel1)");
+        if (true==(params["click"] = "submit")) {
+            self.trigger($.Event("true.ccc_submit_Condition"), {});
+        } else {
+            self.trigger($.Event("false.ccc_submit_Condition"), {});
+        }
+//End ccc_submit_Condition start Entry Point Body
+
+//ccc_submit_Condition start Entry Point End @107-6A43FC60
+    };
+//End ccc_submit_Condition start Entry Point End
+
+//ccc_others_Condition start Entry Point Start @125-3FDEE698
+    actions["ContentPanel1ccc_others_Condition_start"] = function (eventType, parameters) {
+//End ccc_others_Condition start Entry Point Start
+
+//ccc_others_Condition start Entry Point Body @125-2D075684
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content, Panel1)");
+        if (true==(params["click"] = "")) {
+            self.trigger($.Event("true.ccc_others_Condition"), {});
+        } else {
+            self.trigger($.Event("false.ccc_others_Condition"), {});
+        }
+//End ccc_others_Condition start Entry Point Body
+
+//ccc_others_Condition start Entry Point End @125-6A43FC60
+    };
+//End ccc_others_Condition start Entry Point End
+
+//ContentPanel1Panel2users2Button_DeleteOnClick Event Start @-56D6A514
+    actions["ContentPanel1Panel2users2Button_DeleteOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End ContentPanel1Panel2users2Button_DeleteOnClick Event Start
+
+//Confirmation Message @50-8243B274
+        return confirm('Delete record?');
+//End Confirmation Message
+
+//ContentPanel1Panel2users2Button_DeleteOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End ContentPanel1Panel2users2Button_DeleteOnClick Event End
+
+//Event Binding @1-DCC7090C
+    features["ContentPanel1condition_for_show"].ccsBind(function() {
+        this.bind("true.condition_for_show", actions["ContentPanel1Panel2DialogPanel1_show"]);
+    });
+    features["ContentPanel1condition_for_hide"].ccsBind(function() {
+        this.bind("true.condition_for_hide", actions["ContentPanel1Panel2DialogPanel1_hide"]);
+    });
+    features["ContentPanel1UpdatePanel1"].ccsBind(function() {
+        this.bind("afterrefresh.ccsUpdatePanel", actions["ContentPanel1condition_for_show_start"]);
+    });
+    features["ContentPanel1UpdatePanel1"].ccsBind(function() {
+        this.bind("afterrefresh.ccsUpdatePanel", actions["ContentPanel1condition_for_hide_start"]);
+    });
+    features["ContentPanel1Panel2DialogPanel1"].ccsBind(function() {
+        this.bind("show.ccsDialog", actions["ContentPanel1ccc_others_Condition_start"]);
+    });
+    features["ContentPanel1Panel2DialogPanel1"].ccsBind(function() {
+        this.bind("hide.ccsDialog", actions["ContentPanel1ccc_others_Condition_start"]);
+    });
+    $('*:ccsControl(Content, Panel1, users1, users1_Insert)').ccsBind(function() {
+        this.bind("click", actions["ContentPanel1ccc_link_Condition_start"]);
+    });
+    $('*:ccsControl(Content, Panel1, users1, Id)').ccsBind(function() {
+        this.bind("click", actions["ContentPanel1ccc_link_Condition_start"]);
+    });
+    $('*:ccsControl(Content, Panel1, Panel2, users2)').ccsBind(function() {
+        this.bind("submit", actions["ContentPanel1ccc_submit_Condition_start"]);
+    });
+    $('*:ccsControl(Content, Panel1, Panel2, users2, Button_Delete)').ccsBind(function() {
+        this.bind("click", actions["ContentPanel1Panel2users2Button_DeleteOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-266B45E4
+    $('*:ccsControl(Content, Panel1, Panel2, users2, Button_Delete)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+    $('*:ccsControl(Content, Panel1, Panel2, users2, Button_Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</SCRIPT>
+&nbsp;</SPAN> <SPAN contentEditable=true 
+style="BORDER-TOP: rgb(186,107,255) 1px solid; BORDER-RIGHT: rgb(186,107,255) 1px solid; BORDER-BOTTOM: rgb(186,107,255) 1px solid; POSITION: relative; PADDING-BOTTOM: 3px; PADDING-TOP: 3px; PADDING-LEFT: 3px; BORDER-LEFT: rgb(186,107,255) 1px solid; MARGIN-TOP: 3px; DISPLAY: block; PADDING-RIGHT: 3px" 
+ccsName="Content" ccsServiceable="true" ccsId="3" ccsDesignColorSelection="true" 
+ccsContentPlaceHolder="Content" ccsType="Component" oldBorderWidth="1px" 
+oldBorderStyle="dotted" oldBorderColor="rgb(228,207,254)" oldBackgroundColor 
+oldPosition oldFilter>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN> <SPAN 
+contentEditable=true 
+style="BORDER-TOP: transparent 1px dotted; BORDER-RIGHT: transparent 1px dotted; BORDER-BOTTOM: transparent 1px dotted; PADDING-BOTTOM: 3px; PADDING-TOP: 3px; PADDING-LEFT: 3px; BORDER-LEFT: transparent 1px dotted; MARGIN-TOP: 3px; DISPLAY: block; PADDING-RIGHT: 3px" 
+ccsName="Menu" ccsServiceable="true" ccsId="4" ccsDesignColorSelection="true" 
+ccsContentPlaceHolder="Menu" ccsType="Component"><SPAN contentEditable=true 
+style="BORDER-TOP: #96e593 1px solid; BORDER-RIGHT: #96e593 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #96e593 1px solid; BORDER-LEFT: #96e593 1px solid" 
+ccsName="menuincludablepage" ccsServiceable="true" ccsId="7" ccsType="Component" 
+ccsBlockIsWhiteSpace="true">menuincludablepage</SPAN>&nbsp;</SPAN> <SPAN 
+contentEditable=true 
+style="BORDER-TOP: transparent 1px dotted; BORDER-RIGHT: transparent 1px dotted; BORDER-BOTTOM: transparent 1px dotted; PADDING-BOTTOM: 3px; PADDING-TOP: 3px; PADDING-LEFT: 3px; BORDER-LEFT: transparent 1px dotted; MARGIN-TOP: 3px; DISPLAY: block; PADDING-RIGHT: 3px" 
+ccsName="HeaderSidebar" ccsServiceable="true" ccsId="5" 
+ccsDesignColorSelection="true" ccsContentPlaceHolder="HeaderSidebar" 
+ccsType="Component"><SPAN contentEditable=true 
+style="BORDER-TOP: #96e593 1px solid; BORDER-RIGHT: #96e593 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #96e593 1px solid; BORDER-LEFT: #96e593 1px solid" 
+ccsName="headerincludablepage" ccsServiceable="true" ccsId="6" 
+ccsType="Component" 
+ccsBlockIsWhiteSpace="true">headerincludablepage</SPAN>&nbsp;</SPAN> 
+</BODY></HTML>
